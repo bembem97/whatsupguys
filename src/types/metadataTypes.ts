@@ -8,6 +8,7 @@ export interface FrontmatterProps {
     pagename: string
     reference: string
     articleType: string
+    source: string
 }
 
 export interface DataProps {

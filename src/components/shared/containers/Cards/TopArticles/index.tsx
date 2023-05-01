@@ -23,7 +23,7 @@ const TopArticles = ({ data }: Props) => {
                         styles={borderLock}
                         render={(styles) => (
                             <Card
-                                // layout={id === 0 ? "portrait" : "landscape"}
+                                layout={id === 0 ? "portrait" : "landscape"}
                                 css={[
                                     styles,
                                     tw`first-of-type:(

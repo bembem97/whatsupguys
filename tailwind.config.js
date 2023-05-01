@@ -58,9 +58,17 @@ module.exports = {
         plugin(function ({
             addComponents,
             addUtilities,
+            addBase,
             matchUtilities,
             theme,
         }) {
+            addBase({
+                "::-webkit-scrollbar-thumb": `{
+                    background: red; 
+                    border-radius: 10px;
+                  }`,
+            })
+
             addComponents({
                 ".card-portrait": {
                     "@apply grid-rows-[160px_1fr] grid-cols-[minmax(0,_1fr)]":

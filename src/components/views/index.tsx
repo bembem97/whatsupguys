@@ -57,6 +57,11 @@ import multiState from "./react/useState/multiState"
 import objectState from "./react/useState/objectState"
 import updateObjAndArr from "./react/useState/updateObjAndArr"
 
+import accordion from "./howto/accordion"
+import modal from "./howto/modal"
+import parallaxFx from "./howto/parallax"
+import flipCard from "./howto/flipcard"
+
 export type KeyProps = {
     [key: string]: {
         [key: string]:
@@ -148,7 +153,14 @@ const views: KeyProps[] = [
             },
         },
     },
-    { howto: {} },
+    {
+        howto: {
+            accordion: { accordion },
+            modal: { modal },
+            parallaxFx: { parallaxFx },
+            flipCard: { flipCard },
+        },
+    },
 ]
 
 const filter = async (category: string, reference: string) => {

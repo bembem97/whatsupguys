@@ -15,7 +15,7 @@ import Grid from "@shared/containers/Grid"
 import Container from "@shared/containers/Container"
 import filter, { KeyProps } from "@dir/src/components/views"
 import previews from "@dir/src/helpers/previews"
-import Link from "@shared/navigations/Link"
+
 import NavigateToPost from "@shared/navigations/NavigateToPost"
 
 const components = {
@@ -69,6 +69,11 @@ export default function Article({
                             <span css={[...maskingText]}>
                                 {source.frontmatter.title}
                             </span>
+                        </Text>
+
+                        <Text tw="break-words">
+                            <span tw="font-semibold">Original Source: </span>
+                            {source.frontmatter.source}
                         </Text>
 
                         <Divider />

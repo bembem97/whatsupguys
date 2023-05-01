@@ -10,6 +10,7 @@ import Dropdown from "@shared/surfaces/Dropdown"
 import DropdownButton from "@shared/surfaces/Dropdown/DropdownButton"
 import DropdownMenu from "@shared/surfaces/Dropdown/DropdownMenu"
 import Grid from "@shared/containers/Grid"
+import Footer from "@global/Footer"
 // import { PageContainer } from "@layouts/PageLayout"
 
 // const PageContainer = styled("div")(() => [
@@ -79,7 +80,7 @@ const BlogLayout: React.FC<ArticleProps> = ({ children, title, data }) => {
                     {children}
                 </TabContext>
 
-                <footer tw="py-10 bg-highlight"></footer>
+                <Footer />
             </PageContainer>
         </>
     )

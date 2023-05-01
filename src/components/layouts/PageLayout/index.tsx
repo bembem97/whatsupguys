@@ -3,6 +3,7 @@ import Meta from "@global/Meta"
 import tw, { styled, theme } from "twin.macro"
 import Navbar from "@global/Navbar"
 import { LayoutProps } from "@dir/src/types/layout"
+import Footer from "@global/Footer"
 
 export const PageContainer = styled("div")(() => [
     tw`mx-auto w-full h-full grid gap-4 max-w-screen-xl px-1 lg:(px-0)`,
@@ -51,7 +52,7 @@ const PageLayout: React.FC<LayoutProps> = ({ children, title }) => {
 
                 {children}
 
-                <footer tw="py-10 bg-highlight"></footer>
+                <Footer />
             </PageContainer>
         </>
     )

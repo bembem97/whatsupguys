@@ -23,7 +23,6 @@ const Navbar = ({ ...props }: Props) => {
                     >
                         <NavLink href="/">Home</NavLink>
                         <NavLink href="/blog">Blog</NavLink>
-                        <NavLink href="/test">Test</NavLink>
                     </Flex>
                 )}
             />

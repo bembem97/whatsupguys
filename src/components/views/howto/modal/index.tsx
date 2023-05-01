@@ -1,66 +1,31 @@
----
-author: Bembem Cabrera
-createdAt: 2023-1-18
-title: Image Modal
-tags: howto
-reference: modal
-image: /images/svg/howto.svg
-excerpt: Nostrud ex consectetur anim ea culpa nostrud reprehenderit voluptate.
-source: https://www.w3schools.com/howto/howto_css_modal_images.asp
----
+import { SandpackProviderProps } from "@codesandbox/sandpack-react/index"
 
-export const meta = {
-    author,
-    createdAt,
-    title,
-    tags,
-    excerpt,
-}
+const document = `<html lang="en">
+<body>
+    <!-- Trigger the Modal -->
+    <img
+        id="myImg"
+        src="https://images.unsplash.com/photo-1593134257782-e89567b7718a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
+        alt="Snow"
+        style="width:175px; max-width:300px"
+    />
 
-Learn how to create responsive Modal Images with CSS and JavaScript.
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
 
----
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01" />
 
-# Modal Image
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+</body>
+</html>
+`
 
-A modal is a dialog box/popup window that is displayed on top of the current page.
-
----
-
-Step 1\) Add HTML:
-
-## Example
-
-```html
-<!-- Trigger the Modal -->
-<img
-    id="myImg"
-    src="https://images.unsplash.com/photo-1593134257782-e89567b7718a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"
-    alt="Snow"
-    style="width:175px; max-width:300px"
-/>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-    <!-- The Close Button -->
-    <span class="close">&times;</span>
-
-    <!-- Modal Content (The Image) -->
-    <img class="modal-content" id="img01" />
-
-    <!-- Modal Caption (Image Text) -->
-    <div id="caption"></div>
-</div>
-```
-
----
-
-Step 2\) Add CSS:
-
-## Example
-
-```css
-/* Style the Image Used to Trigger the Modal */
+const styles = `/* Style the Image Used to Trigger the Modal */
 #myImg {
     border-radius: 5px;
     cursor: pointer;
@@ -79,8 +44,8 @@ Step 2\) Add CSS:
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0, 0, 0); /* Fallback color */
     background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
@@ -145,16 +110,9 @@ Step 2\) Add CSS:
     .modal-content {
         width: 100%;
     }
-}
-```
+}`
 
----
-
-Step 3\) Add JavaScript:
-
-## Example
-
-```js
+const script = `import "./styles.css";
 // Get the modal
 var modal = document.getElementById("myModal")
 
@@ -174,7 +132,18 @@ var span = document.getElementsByClassName("close")[0]
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
     modal.style.display = "none"
-}
-```
+}`
 
-<Modal />
+const modal: SandpackProviderProps = {
+    template: "vanilla",
+    files: {
+        "/index.html": {
+            active: true,
+            code: document,
+        },
+        "index.js": { code: script },
+        "styles.css": { code: styles },
+    },
+}
+
+export default modal

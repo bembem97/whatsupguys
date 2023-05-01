@@ -21,6 +21,23 @@ const customStyles = css({
     "html, body, #__next, #__content": {
         ...tw`min-h-screen`,
     },
+
+    "::-webkit-scrollbar": {
+        width: `20px`,
+    },
+
+    "::-webkit-scrollbar-track": {
+        border: `1px solid rgba(var(--primary) / 0.25)`,
+    },
+
+    "::-webkit-scrollbar-thumb": {
+        background: `rgb(var(--primary))`,
+    },
+
+    "::-webkit-scrollbar-thumb:hover": {
+        background: `rgb(var(--secondary))`,
+    },
+
     body: {
         ...tw`antialiased text-primary bg-dark`,
         backgroundImage: `

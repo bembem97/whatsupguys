@@ -28,9 +28,10 @@ const indexStyles = `.flex-container {
     display: flex;
     height: 600px;
     flex-wrap: wrap;
-    align-content: flex-end;
     overflow: scroll;  
     background-color: DodgerBlue;
+    /* stretch | center | flex-start | flex-end | space-between | space-around | space-evenly */
+    align-content: flex-end;
 }
 
 .flex-container > div {

@@ -23,7 +23,7 @@ const NavigateToPost = ({ back, next }: NavigateToPostTypes) => {
                             css={styles}
                             href={`/blog/${back.pagename}`}
                         >
-                            <Text variant="title">Back</Text>
+                            <Text variant="title">&laquo; Back</Text>
                         </PostButton>
                     )}
                 />
@@ -39,7 +39,7 @@ const NavigateToPost = ({ back, next }: NavigateToPostTypes) => {
                             href={`/blog/${next.pagename}`}
                             tw="ml-auto"
                         >
-                            <Text variant="title">Next</Text>
+                            <Text variant="title">Next &raquo;</Text>
                         </PostButton>
                     )}
                 />

@@ -17,8 +17,9 @@ const indexDoc = `<html lang="en">
 
 const indexStyles = `.flex-container {
     display: flex;
-    flex-direction: column;
     background-color: DodgerBlue;
+    /* column | column-reverse | row | row-reverse */
+    flex-direction: column;
 }
   
 .flex-container > div {
