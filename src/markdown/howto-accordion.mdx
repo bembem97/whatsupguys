@@ -1,0 +1,109 @@
+---
+author: Bembem Cabrera
+createdAt: 2023-1-17
+title: How to implement Accordion
+tags: howto
+reference: accordion
+image: /images/svg/howto.svg
+excerpt: Qui do nulla reprehenderit labore fugiat. Laboris irure nisi eiusmod id adipisicing Lorem eiusmod reprehenderit reprehenderit eiusmod.
+---
+
+export const meta = {
+    author,
+    createdAt,
+    title,
+    tags,
+    excerpt,
+}
+
+Learn how to create an accordion (collapsible content).
+
+---
+
+# Accordion
+
+Accordions are useful when you want to toggle between hiding and showing large amount of content
+
+# Create An Accordion
+
+Step 1) Add HTML:
+
+## Example
+
+```html
+<button class="accordion">Section 1</button>
+<div class="panel">
+    <p>Lorem ipsum...</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+    <p>Lorem ipsum...</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+    <p>Lorem ipsum...</p>
+</div>
+```
+
+---
+
+Step 2) Add CSS:
+
+Style the accordion:
+
+## Example
+
+```css
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+```
+
+---
+
+Step 3) Add JavaScript:
+
+## Example
+
+```js
+var acc = document.getElementsByClassName("accordion")
+var i
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active")
+        var panel = this.nextElementSibling
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px"
+        }
+    })
+}
+```

@@ -1,0 +1,132 @@
+---
+author: Bembem Cabrera
+createdAt: 2023-1-19
+title: Parallax Effects
+tags: howto
+reference: parallaxFx
+image: /images/svg/howto.svg
+excerpt: Minim mollit ea ipsum ipsum cillum enim. Id excepteur excepteur eiusmod ipsum eu culpa.
+---
+
+export const meta = {
+    author,
+    createdAt,
+    title,
+    tags,
+    excerpt,
+}
+
+# Parallax
+
+Ullamco consequat laboris incididunt ad aliquip ea irure Lorem. Est irure ad labore nostrud in minim consequat magna culpa anim. Magna culpa veniam commodo ullamco minim sint eu non velit amet aliquip. Commodo occaecat Lorem aliquip nulla ea ipsum incididunt qui dolor enim elit. Duis elit incididunt et excepteur occaecat cillum duis occaecat magna. Ut qui dolor ex cillum adipisicing voluptate adipisicing elit.
+
+Do voluptate eu nisi reprehenderit dolor enim veniam consectetur tempor Lorem cillum do esse aute.
+
+Cillum voluptate minim anim exercitation do eiusmod sunt.
+
+## 1\.) Example
+
+Aute excepteur sunt ut et duis aliqua nostrud ad nulla consectetur.
+
+```html
+<div class="wrapper">
+    <header>
+        <img
+            src="https://images.unsplash.com/photo-1612353238806-d588a88cb474?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870"
+            alt="mountain"
+            class="background"
+        />
+        <img
+            src="https://cdn.pixabay.com/photo/2016/02/04/13/49/the-earth-1179212_960_720.png"
+            alt="trees"
+            class="foreground"
+        />
+        <h1 class="h1">Parallax</h1>
+    </header>
+
+    <section>
+        Sunt incididunt eiusmod veniam cupidatat sunt non velit labore. Laboris
+        nisi velit nulla ea amet labore Lorem exercitation ut nulla. Consequat
+        ea esse consectetur minim anim do dolore proident. Cillum officia nulla
+        deserunt tempor consequat deserunt occaecat. Excepteur eiusmod sunt amet
+        cillum incididunt id nulla velit ullamco fugiat sunt. Mollit Lorem
+        fugiat ut duis anim nisi aute eu laboris consectetur sit. Consequat sunt
+        aliquip aliquip deserunt dolor pariatur reprehenderit reprehenderit esse
+        id magna. Sit anim proident amet dolore occaecat ea exercitation mollit.
+        Nulla velit commodo reprehenderit ipsum ex in laborum tempor laborum
+        ipsum id. Eu aliquip ad magna dolore aliquip incididunt. Voluptate
+        aliquip ullamco occaecat commodo sint eu ut aute in et labore ex et id.
+        Nisi nisi Lorem do cupidatat sunt aliquip eiusmod. Eiusmod aliqua Lorem
+        officia do aute anim dolore nisi labore.
+    </section>
+</div>
+```
+
+## 2\.) Example
+
+Culpa irure consequat ut ex mollit exercitation Lorem nulla eiusmod ipsum amet exercitation.
+
+```css
+body {
+    margin: 0;
+}
+
+h1.h1 {
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: forestgreen;
+    color: white;
+}
+
+.wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    perspective: 10px;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+section {
+    background: rgb(25, 25, 25);
+    color: white;
+    padding: 1rem 2rem;
+}
+
+.background {
+    transform: translateZ(-10px) scale(2);
+    background-color: white;
+}
+
+.foreground {
+    transform: translateZ(-5px) scale(0.5);
+    height: initial !important;
+}
+
+.foreground,
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+```
+
+Velit deserunt nostrud consequat pariatur ad labore consectetur id ea laborum. Deserunt ad deserunt ex minim reprehenderit. Eiusmod irure adipisicing eu labore labore Lorem proident Lorem eiusmod nostrud sint ut deserunt. Ut mollit amet magna qui nostrud duis proident cillum mollit occaecat ullamco. Velit nostrud dolore sit incididunt occaecat ipsum. Velit magna officia ut cillum minim enim ullamco ullamco.
+
+Ullamco nisi dolore nostrud qui eiusmod laborum cillum adipisicing mollit aute pariatur laborum exercitation.
