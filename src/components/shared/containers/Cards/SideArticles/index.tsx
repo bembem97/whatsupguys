@@ -16,9 +16,10 @@ interface Props {
 const SideArticles = ({ data }: Props) => {
     return (
         <Grid tw="gap-2">
-            <Text variant="title" tw="neon-text">
+            <Text variant="paragraph" tw="neon-text">
                 How To
             </Text>
+
             <Grid tw="gap-2 md:(grid-cols-2) lg:(grid-cols-1)">
                 {data?.map((post, id) => (
                     <OnTarget

@@ -23,15 +23,15 @@ const customStyles = css({
     },
 
     "::-webkit-scrollbar": {
-        width: `20px`,
+        ...tw`w-2.5 h-2.5`,
     },
 
     "::-webkit-scrollbar-track": {
-        border: `1px solid rgba(var(--primary) / 0.25)`,
+        ...tw`border border-primary p-0.5`,
     },
 
     "::-webkit-scrollbar-thumb": {
-        background: `rgb(var(--primary))`,
+        background: `rgb(var(--primary) / 0.8)`,
     },
 
     "::-webkit-scrollbar-thumb:hover": {

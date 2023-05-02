@@ -9,6 +9,7 @@ import Grid from "@shared/containers/Grid"
 import OnTarget, { borderLock } from "@shared/decorations/OnTarget"
 import Link from "@shared/navigations/Link"
 import Container from "@shared/containers/Container"
+import Text from "@shared/datadisplay/Text"
 
 interface Props {
     data: FrontmatterProps[]
@@ -16,7 +17,11 @@ interface Props {
 
 const FeaturedArticles = ({ data }: Props) => {
     return (
-        <Grid tw="gap-y-2">
+        <Grid tw="gap-y-2 grid-rows-[repeat(3,_min-content)]">
+            <Text variant="paragraph" tw="neon-text">
+                Explore
+            </Text>
+
             <Container fluid tw="border border-primary/25 py-2">
                 <OnTarget
                     lock={false}

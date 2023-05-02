@@ -27,7 +27,7 @@ const components = {
     code: ({ ...props }) => (
         <Text variant="code" className="code" tw="px-1" as="code" {...props} />
     ),
-    hr: ({ ...props }) => <Divider {...props} tw="my-5" />,
+    hr: ({ ...props }) => <Divider {...props} />,
     ul: ({ ...props }) => <ul {...props} tw="list-disc p-[revert]" />,
 }
 
@@ -73,7 +73,7 @@ export default function Article({
 
                         <Text tw="break-words">
                             <span tw="font-semibold">Original Source: </span>
-                            {source.frontmatter.source}
+                            {source.frontmatter.source || "None"}
                         </Text>
 
                         <Divider />

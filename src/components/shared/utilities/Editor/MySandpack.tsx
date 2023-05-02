@@ -24,7 +24,7 @@ const MySandpack = ({ ...props }: Props) => {
                         ...props.options,
                         classes: {
                             "sp-button": css(
-                                tw`border border-primary text-primary neon-text`
+                                tw`border border-primary bg-dark text-primary neon-text`
                             ),
                             "sp-wrapper": css(tw`@container/editor`),
                             "sp-layout": css(

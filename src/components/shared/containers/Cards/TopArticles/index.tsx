@@ -7,6 +7,7 @@ import React from "react"
 import tw from "twin.macro"
 import Grid from "@shared/containers/Grid"
 import OnTarget, { borderLock } from "@shared/decorations/OnTarget"
+import Text from "@shared/datadisplay/Text"
 
 interface Props {
     data: FrontmatterProps[]
@@ -15,6 +16,10 @@ interface Props {
 const TopArticles = ({ data }: Props) => {
     return (
         <div tw="@container/card-list">
+            <Text variant="paragraph" tw="neon-text">
+                Web Dev for beginners
+            </Text>
+
             <Grid tw="grid-cols-1 gap-2 @tab/card-list:(grid-rows-[repeat(2, minmax(0, min-content))] grid-cols-2)">
                 {data?.map((post, id) => (
                     <OnTarget
