@@ -12,7 +12,7 @@ const Footer = () => {
             <StyledFooter>
                 <Grid tw="gap-y-4 place-items-center">
                     <Text variant="sub" as="p" tw="flex items-center gap-x-1.5">
-                        &copy; {new Date().getFullYear()} Copyright:{" "}
+                        &copy; {new Date().getFullYear()} Copyright by
                         <Text variant="paragraph">{"WhatsUpGuys"}</Text>
                     </Text>
                 </Grid>

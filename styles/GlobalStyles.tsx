@@ -50,6 +50,9 @@ const customStyles = css({
     "#__content": {
         display: "grid",
     },
+    ".sample-heading :is(h1, h2, h3, h4, h5, h6)": {
+        fontSize: "revert!important",
+    },
 })
 
 const GlobalStyles = () => (

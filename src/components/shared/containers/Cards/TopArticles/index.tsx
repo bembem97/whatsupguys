@@ -17,7 +17,7 @@ const TopArticles = ({ data }: Props) => {
     return (
         <div tw="@container/card-list">
             <Text variant="paragraph" tw="neon-text">
-                Web Dev for beginners
+                For Beginners
             </Text>
 
             <Grid tw="grid-cols-1 gap-2 @tab/card-list:(grid-rows-[repeat(2, minmax(0, min-content))] grid-cols-2)">
